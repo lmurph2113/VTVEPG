@@ -6,8 +6,8 @@ numberofchannels=2
 declare -a a0=("tvg-id-channel1" "Name Channel 1" "Program Tittle" "Creative Program Description")
 declare -a a1=("tvg-id-channel1" "Name Channel 1" "Program Tittle" "Creative Program Description")
 
-starttimes=("000000" "060000" "120000" "180000")
-endtimes=("060000" "120000" "180000" "235900")
+starttimes=("000000" "020000" "040000" "060000" "080000" "100000" "120000" "140000" "160000" "180000" "200000" "220000")
+endtimes=("020000" "040000" "060000" "080000" "100000" "120000" "140000" "160000" "180000" "200000" "220000" "235900")
 BASEPATH="/your/folder/path"
 DUMMYFILENAME=dummy.xml
 
@@ -32,13 +32,13 @@ DUMMYFILENAME=dummy.xml
 			tvgid=a$i[0]
 			title=a$i[2]
 			desc=a$i[3]
-			for j in {0..3}; do
+			for j in $(seq 0 $((${#starttimes[@]} - 1))); do
 					echo '    <programme start="'$today${starttimes[$j]}' +0000" stop="'$today${endtimes[$j]}' +0000" channel="'${!tvgid}'">' >> $BASEPATH/$DUMMYFILENAME
 					echo '        <title lang="pt">'${!title}'</title>' >> $BASEPATH/$DUMMYFILENAME
 					echo '        <desc lang="pt">'${!desc}'</desc>' >> $BASEPATH/$DUMMYFILENAME
 					echo '    </programme>' >> $BASEPATH/$DUMMYFILENAME
 			done
-			for j in {0..3}; do
+			for j in $(seq 0 $((${#starttimes[@]} - 1))); do
 					echo '    <programme start="'$tomorrow${starttimes[$j]}' +0000" stop="'$tomorrow${endtimes[$j]}' +0000" channel="'${!tvgid}'">' >> $BASEPATH/$DUMMYFILENAME
 					echo '        <title lang="pt">'${!title}'</title>' >> $BASEPATH/$DUMMYFILENAME
 					echo '        <desc lang="pt">'${!desc}'</desc>' >> $BASEPATH/$DUMMYFILENAME
