@@ -3,8 +3,8 @@
 ## VARIABLES
 ### Your channels go here. add more channels as you want
 numberofchannels=2
-declare -a a0=("tvg-id-channel1" "Name Channel 1" "Program Tittle" "Creative Program Description")
-declare -a a1=("tvg-id-channel1" "Name Channel 1" "Program Tittle" "Creative Program Description")
+declare -a a0=("tvg-id-channel1" "VeroTV Test Channel" "Welcome to VeroTV" "Test programming used by our team. If you're seeing this on a live channel then please contact @VeroTVSupport on Telegram.")
+declare -a a1=("tvg-id-channel2" "Christmas Movies" "Christmas Movies on VeroTV" "Join us in building the Christmas Spirit with 24/7 Christmas Movies on VeroTV. ")
 
 starttimes=("000000" "020000" "040000" "060000" "080000" "100000" "120000" "140000" "160000" "180000" "200000" "220000")
 endtimes=("020000" "040000" "060000" "080000" "100000" "120000" "140000" "160000" "180000" "200000" "220000" "235900")
