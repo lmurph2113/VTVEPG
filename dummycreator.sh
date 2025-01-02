@@ -9,7 +9,7 @@ declare -a a1=("tvg-id-channel2" "Christmas Movies" "Christmas Movies on VeroTV"
 starttimes=("000000" "020000" "040000" "060000" "080000" "100000" "120000" "140000" "160000" "180000" "200000" "220000")
 endtimes=("020000" "040000" "060000" "080000" "100000" "120000" "140000" "160000" "180000" "200000" "220000" "235900")
 BASEPATH="/your/folder/path"
-DUMMYFILENAME=dummy.xml
+DUMMYFILENAME=VTVEPG.xml
 
 		today=$(date +%Y%m%d)
 		tomorrow=$(date --date="+1 day" +%Y%m%d)
